@@ -9,6 +9,7 @@
   "author": "tamakiii",
   "license": "ISC",
   "dependencies": {
+    "jquery.base64": "github:tamakiii/jquery.base64#v0.1.0"
   },
   "devDependencies": {
     "jquery": "^3.2.1",
