@@ -1,6 +1,7 @@
 .PHONY: install uninstall
 
 MAKE := $(shell which make)
+WEBPACK := node $(shell realpath node_modules/webpack/bin/webpack.js)
 
 install:
 	@$(MAKE) setup
@@ -18,6 +19,9 @@ install-jquery:
 
 #install-jquery-base64:
 #	@cp node_modules/js-base64/base64.min.js sample/vendor/js-base64/base64.min.js
+
+sample-webpack:
+	@cd sample/webpack && $(WEBPACK) --config config.js index.js bundle.js
 
 uninstall:
 	@rm -rf node_modules
