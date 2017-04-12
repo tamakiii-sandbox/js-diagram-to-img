@@ -16,5 +16,8 @@ install-normalize-css:
 install-jquery:
 	@cp node_modules/jquery/dist/jquery.slim.min.js sample/vendor/jquery/jquery.slim.min.js
 
+#install-jquery-base64:
+#	@cp node_modules/js-base64/base64.min.js sample/vendor/js-base64/base64.min.js
+
 uninstall:
 	@rm -rf node_modules
