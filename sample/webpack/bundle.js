@@ -2120,7 +2120,7 @@ module.exports = g;
 var Buffer = __webpack_require__(0).Buffer
 
 module.exports = {
-  run: function (text) {
+  encode: function (text) {
     return new Buffer(text).toString('base64');
   }
 };
