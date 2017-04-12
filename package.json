@@ -14,6 +14,6 @@
     "jquery": "^3.2.1",
     "normalize.css": "^6.0.0",
     "webpack": "^2.3.3",
-    "jquery.base64": "github:tamakiii/jquery.base64#v0.1.0"
+    "jquery.base64": "github:tamakiii/jquery.base64#v0.0.1"
   }
 }
