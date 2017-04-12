@@ -39,9 +39,14 @@
     </svg>
     <div id="background"></div>
     <div>
-      <textarea id="input"></textarea>
-      <textarea id="output"></textarea>
-      <input type="submit" id="submit" value="encode">
+      <div>
+        <textarea id="input" style="width: 400px; height: 200px;"></textarea>
+        <div><input type="submit" id="encode" value="encode"></div>
+      </div>
+      <div>
+        <textarea id="output" style="width: 400px; height: 200px;"></textarea>
+        <div><input type="submit" id="apply" value="apply"></div>
+      </div>
     </div>
     <div>
       <img src="" id="img">
@@ -58,12 +63,15 @@
   <script src="https://rawgithub.com/yatt/jquery.base64/master/jquery.base64.js" charset="utf-8"></script>
   <script>
 
-    $('#submit').on('click', function(e) {
-      var text = $('#input').val();
+    $('input[type=submit]#encode').on('click', function() {
+      var text = $('textarea#input').val();
       var blob = $.base64.encode(text);
-      $('#output').val(blob);
-      $('#img').attr('src', 'data:image/svg+xml;base64,' + blob);
+      $('textarea#output').val(blob);
     });
+    $('input[type=submit]#apply').on('click', function() {
+      var blob = $('textarea#output').val();
+      $('#img').attr('src', 'data:image/svg+xml;base64,' + blob);
+    })
 
   </script>
 </body>
