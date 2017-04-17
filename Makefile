@@ -1,7 +1,7 @@
 .PHONY: install uninstall
 
 MAKE := $(shell which make)
-WEBPACK := node $(@shell realpath node_modules/webpack/bin/webpack.js)
+WEBPACK := node $(shell realpath node_modules/webpack/bin/webpack.js)
 
 install:
 	@$(MAKE) setup
