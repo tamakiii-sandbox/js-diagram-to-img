@@ -1,9 +1,9 @@
-var jQuery = require('jQuery');
-var Chartjs = require('chart.js');
+var jQuery = require('jQuery')
+var d3 = require('d3')
 
 module.exports = {
   jQuery: jQuery,
-  Chartjs: Chartjs,
+  d3: d3,
   onload: function() {
     var $ = jQuery;
 

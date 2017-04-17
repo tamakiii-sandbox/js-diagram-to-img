@@ -9,7 +9,8 @@
   "author": "tamakiii",
   "license": "ISC",
   "dependencies": {
-    "chart.js": "^2.5.0"
+    "chart.js": "^2.5.0",
+    "d3": "^4.8.0"
   },
   "devDependencies": {
     "jquery": "^3.2.1",
