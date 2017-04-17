@@ -2,7 +2,7 @@
 
 MAKE := $(shell which make)
 DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
-WEBPACK := node $(shell realpath node_modules/webpack/bin/webpack.js)
+WEBPACK := $(shell realpath node_modules/.bin/webpack)
 
 install:
 	@$(MAKE) setup
