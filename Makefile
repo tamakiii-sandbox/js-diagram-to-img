@@ -24,6 +24,7 @@ install-jquery-base64:
 build:
 	@cd src/sample/webpack && $(WEBPACK) --config config.js index.js $(DIR)/sample/webpack/bundle.js
 	@cd src/sample/chart.js && $(WEBPACK) --config config.js index.js $(DIR)/sample/chart.js/bundle.js
+	@cd src/sample/3d && $(WEBPACK) --config config.js index.js $(DIR)/sample/3d/bundle.js
 
 uninstall:
 	@rm -rf node_modules
