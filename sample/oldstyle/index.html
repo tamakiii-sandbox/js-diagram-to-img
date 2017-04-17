@@ -1,11 +1,17 @@
 <html>
 <head>
   <title>js-diagram-to-img</title>
-  <link href="vendor/normalize.css/normalize.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="../vendor/normalize.css/normalize.css" media="screen" rel="stylesheet" type="text/css">
 </head>
 <body>
   <div>
-    <svg viewBox="0 0 500 100" class="chart" width="452" height="180" id="svg">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+      viewBox="0 0 500 100"
+      class="chart"
+      width="452"
+      height="180"
+      id="svg"
+    >
       <polyline
          fill="none"
          stroke="#0074d9"
@@ -52,15 +58,8 @@
       <img src="" id="img">
     </div>
   </div>
-  <style type="text/css">
-    #background {
-      width: 452px;
-      height: 180px;
-      background: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTAwIDEwMCIgY2xhc3M9ImNoYXJ0IiB3aWR0aD0iNDUyIiBoZWlnaHQ9IjE4MCIgaWQ9InN2ZyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICAgICAgPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwNzRkOSIgc3Ryb2tlLXdpZHRoPSIyIiBwb2ludHM9Ig0KICAgICAgICAgICAwMCwxMjANCiAgICAgICAgICAgMjAsNjANCiAgICAgICAgICAgNDAsODANCiAgICAgICAgICAgNjAsMjANCiAgICAgICAgICAgODAsODANCiAgICAgICAgICAgMTAwLDgwDQogICAgICAgICAgIDEyMCw2MA0KICAgICAgICAgICAxNDAsMTAwDQogICAgICAgICAgIDE2MCw5MA0KICAgICAgICAgICAxODAsODANCiAgICAgICAgICAgMjAwLCAxMTANCiAgICAgICAgICAgMjIwLCAxMA0KICAgICAgICAgICAyNDAsIDcwDQogICAgICAgICAgIDI2MCwgMTAwDQogICAgICAgICAgIDI4MCwgMTAwDQogICAgICAgICAgIDMwMCwgNDANCiAgICAgICAgICAgMzIwLCAwDQogICAgICAgICAgIDM0MCwgMTAwDQogICAgICAgICAgIDM2MCwgMTAwDQogICAgICAgICAgIDM4MCwgMTIwDQogICAgICAgICAgIDQwMCwgNjANCiAgICAgICAgICAgNDIwLCA3MA0KICAgICAgICAgICA0NDAsIDgwDQogICAgICAgICAiPjwvcG9seWxpbmU+DQogICAgPC9zdmc+');
-    }
-  </style>
-  <script src="vendor/jquery/jquery.slim.min.js" charset="utf-8"></script>
-  <script src="vendor/jquery.base64/jquery.base64.js" charset="utf-8"></script>
+  <script src="../vendor/jquery/jquery.slim.min.js" charset="utf-8"></script>
+  <script src="../vendor/jquery.base64/jquery.base64.js" charset="utf-8"></script>
   <script>
 
     $('input[type=submit]#encode').on('click', function() {
