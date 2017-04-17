@@ -6,7 +6,13 @@
 </head>
 <body>
   <div>
-    <svg viewBox="0 0 500 100" class="chart" width="452" height="180" id="svg">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+      viewBox="0 0 500 100"
+      class="chart"
+      width="452"
+      height="180"
+      id="svg"
+    >
       <polyline
          fill="none"
          stroke="#0074d9"
@@ -52,12 +58,13 @@
       </div>
     </div>
   </div>
-  <script src="../vendor/jquery/jquery.slim.min.js" charset="utf-8"></script>
   <script>
+
+    var $ = Module.jQuery;
 
     $('input[type=submit]#encode').on('click', function() {
       var text = $('textarea#input').val();
-      var blob = WebpackSample.encode(text);
+      var blob = Module.encode(text);
       $('textarea#output').val(blob);
     });
     $('input[type=submit]#apply').on('click', function() {
