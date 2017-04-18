@@ -14,8 +14,9 @@
   },
   "devDependencies": {
     "jquery": "^3.2.1",
+    "jquery.base64": "github:tamakiii/jquery.base64#v0.0.1",
+    "json-loader": "^0.5.4",
     "normalize.css": "^6.0.0",
-    "webpack": "^2.3.3",
-    "jquery.base64": "github:tamakiii/jquery.base64#v0.0.1"
+    "webpack": "^2.3.3"
   }
 }

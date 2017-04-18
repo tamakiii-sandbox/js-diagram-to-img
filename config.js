@@ -1,8 +1,22 @@
-var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
   output: {
-    libraryTarget: 'var',
-    library: 'Module'
+    path: path.join(__dirname, 'scripts'),
+    filename: 'bundle.js'
+  },
+  module: {
+    loaders: [
+      { test: /\.json$/, loader: 'json-loader' }
+    ]
+  },
+  resolve: {
+    extensions: ['.webpack.js', '.web.js', '.js']
+  },
+  node: {
+    console: true,
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
   }
 };
