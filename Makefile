@@ -22,6 +22,9 @@ install-jquery-base64:
 	@cp node_modules/jquery.base64/jquery.base64.js sample/vendor/jquery.base64/jquery.base64.js
 
 build:
+	@$(WEBPACK) --config config.js index.js dist/bundle.js
+
+build-sample:
 	@cd src/sample/webpack && $(WEBPACK) --config config.js index.js $(DIR)/sample/webpack/bundle.js
 	@cd src/sample/chart.js && $(WEBPACK) --config config.js index.js $(DIR)/sample/chart.js/bundle.js
 	@cd src/sample/3d && $(WEBPACK) --config config.js index.js $(DIR)/sample/3d/bundle.js
