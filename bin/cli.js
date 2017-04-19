@@ -2,4 +2,4 @@
 
 var bundle = require('../')
 
-// bundle.execute()
+bundle.screenshot(process.argv[2])
