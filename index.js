@@ -1,2 +1,4 @@
 
-console.log('hi there')
+console.log('...')
+
+module.exports.var = {}

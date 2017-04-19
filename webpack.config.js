@@ -19,6 +19,8 @@ module.exports = {
     console: true,
     fs: 'empty',
     net: 'empty',
-    tls: 'empty'
+    tls: 'empty',
+    tav: 'empty',
+    node-dom: 'empty'
   }
 };
