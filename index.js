@@ -1,17 +1,20 @@
-var jsdom = require('jsdom')
-var fs = require('fs');
+const CDP = require('chrome-remote-interface');
 
-var html = fs.readFileSync('./sample/chart.js/index.html', 'utf-8');
-var jQuery = require('jQuery');
+CDP((client) => {
+  const {Page, Runtime} = client
 
-jsdom.env(
-  html,
-  // 'https://iojs.org/dist/',
-  ['http://code.jquery.com/jquery.js'],
-  function (err, window) {
-    console.log(window.$('#canvas').toDataURL('image/png'))
-    // console.log('There have been', window.$('a').length - 4, 'io.js releases!')
-  }
-);
+  Promise.all([
+    Page.enable()
+  ]).then(() => {
+    return Page.navigate({url: 'https://google.co.jp/'})
+  })
+
+  Page.loadEventFired(() => {
+    Runtime.evaluate({expression: 'document.body.outerHTML'}).then((result) => {
+      console.log(result.result.value)
+      client.close()
+    })
+  })
+})
 
 module.exports.var = {}
