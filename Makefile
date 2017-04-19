@@ -11,7 +11,7 @@ install-sample: install
 	@$(MAKE) -C make/sample install DIR=$(DIR)
 
 build:
-	@$(WEBPACK) --config config.js index.js dist/bundle.js
+	@npm run build
 
 build-sample:
 	@$(MAKE) -C make/sample build DIR=$(DIR)
